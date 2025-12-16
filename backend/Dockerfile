@@ -12,7 +12,8 @@ RUN apt-get update && \
     gcc \
     postgresql-client \
     netcat-traditional \
-    curl && \
+    curl \
+    dos2unix && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -24,6 +25,7 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 RUN mkdir -p /app/static /app/media && \
+    dos2unix /app/entrypoint.sh /app/start.sh && \
     chmod +x /app/entrypoint.sh /app/start.sh
 
 EXPOSE 8000

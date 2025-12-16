@@ -35,7 +35,7 @@ echo 🎯 Запускаем контейнеры...
 docker-compose up -d
 echo.
 echo ⏳ Ожидание запуска сервисов...
-timeout /t 10 /nobreak >nul
+timeout /t 30 /nobreak >nul
 echo.
 echo ✅ Проект успешно запущен!
 echo.

@@ -29,7 +29,7 @@ setup:
 	docker-compose up -d
 	@echo ""
 	@echo "⏳ Ожидание запуска сервисов..."
-	@sleep 10
+	@sleep 30
 	@echo ""
 	@echo "✅ Проект успешно запущен!"
 	@echo ""
